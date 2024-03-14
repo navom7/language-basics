@@ -1,3 +1,6 @@
+package employee;
+
+
 public class Employee {
     public static void main(String[] args) {
         int a = -10;
@@ -20,5 +23,8 @@ public class Employee {
 
         System.out.println(s1.equals(s3));//true because value are same
 
+    }
+    public void getSalary() {
+        System.out.println(23434);
     }
 }
