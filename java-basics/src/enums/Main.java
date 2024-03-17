@@ -29,7 +29,12 @@ public class Main {
         for(EnumWithMethodOverride e : EnumWithMethodOverride.values()) {
             System.out.println(e.name());
             e.dummyMethod();
-
+        }
+        System.out.println("\nInterface with enums: ");
+        //Interface with enum
+        for(EnumsWithInterface e : EnumsWithInterface.values()) {
+            System.out.println(e.name());
+            System.out.println(e.toLowerCase());
         }
     }
 }
