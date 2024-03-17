@@ -1,4 +1,4 @@
-package genericclass.bounded;
+package classes.genericclass.bounded;
 
 public class Main {
     public static void main(String[] args) {

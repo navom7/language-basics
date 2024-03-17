@@ -1,4 +1,4 @@
-package genericclass.rawtype;
+package classes.genericclass.rawtype;
 
 public class RawType<T> {
     T value;

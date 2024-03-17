@@ -1,4 +1,4 @@
-package genericclass.multiple;
+package classes.genericclass.multiple;
 
 public class Pair<K, V>{
     K key;

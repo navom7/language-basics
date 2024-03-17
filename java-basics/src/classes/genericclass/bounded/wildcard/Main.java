@@ -1,4 +1,4 @@
-package genericclass.bounded.wildcard;
+package classes.genericclass.bounded.wildcard;
 
 import java.util.ArrayList;
 import java.util.List;

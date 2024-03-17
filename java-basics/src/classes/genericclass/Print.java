@@ -1,4 +1,4 @@
-package genericclass;
+package classes.genericclass;
 
 public class Print<T> {
     T value;

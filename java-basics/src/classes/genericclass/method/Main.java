@@ -1,6 +1,6 @@
-package genericclass.method;
+package classes.genericclass.method;
 
-import genericclass.multiple.Pair;
+import classes.genericclass.multiple.Pair;
 
 public class Main {
     public static void main(String[] args) {

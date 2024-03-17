@@ -1,4 +1,4 @@
-package genericclass.bounded;
+package classes.genericclass.bounded;
 
 /*
 this is equivalent to the following:

@@ -1,4 +1,4 @@
-package genericclass;
+package classes.genericclass;
 
 public class Main {
     public static void main(String[] args) {

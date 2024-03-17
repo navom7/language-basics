@@ -1,4 +1,4 @@
-package pojo;
+package classes.pojo;
 
 public class POJO {
     int id;

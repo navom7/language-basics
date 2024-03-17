@@ -1,6 +1,6 @@
-package genericclass.method;
+package classes.genericclass.method;
 
-import genericclass.multiple.Pair;
+import classes.genericclass.multiple.Pair;
 
 public class GenericMethod {
     public <K,V> void printValue(Pair<K,V> p1, Pair<K, V> p2) {
