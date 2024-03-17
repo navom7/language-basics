@@ -1,4 +1,4 @@
-package enums.comparison;
+package classes.enums.comparison;
 
 public enum EnumSample {
     SUNDAY,

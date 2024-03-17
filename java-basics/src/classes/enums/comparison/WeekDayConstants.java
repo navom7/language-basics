@@ -1,4 +1,4 @@
-package enums.comparison;
+package classes.enums.comparison;
 
 public class WeekDayConstants {
     public static final int SUNDAY = 1;

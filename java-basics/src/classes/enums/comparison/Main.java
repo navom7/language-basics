@@ -1,4 +1,4 @@
-package enums.comparison;
+package classes.enums.comparison;
 
 public class Main {
     public static void main(String[] args) {

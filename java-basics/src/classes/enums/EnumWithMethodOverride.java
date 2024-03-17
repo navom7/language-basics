@@ -1,4 +1,4 @@
-package enums;
+package classes.enums;
 
 public enum EnumWithMethodOverride {
     MONDAY{
