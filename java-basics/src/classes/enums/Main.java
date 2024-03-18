@@ -36,5 +36,7 @@ public class Main {
             System.out.println(e.name());
             System.out.println(e.toLowerCase());
         }
+
+        System.out.println("\ntHE eND");
     }
 }
