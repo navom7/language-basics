@@ -1,0 +1,3 @@
+Static methods can access only static variables and methods
+Non-static methods can access both static and non-static methods and variables
+

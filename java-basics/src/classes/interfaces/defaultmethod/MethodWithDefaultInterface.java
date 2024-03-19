@@ -16,7 +16,7 @@ public interface MethodWithDefaultInterface {
     -> there can be multiple level of inheritance
             and in this case default methods is avaliable in all of its child classes
     -> if interface1 has a default method and interface2 extends interface1 and insided this
-            interfacen same default method it makes abstract than those classes implementing
+            interface2 same default method it makes abstract then those classes implementing
             this interface2 will have to provide implementations of that method
      */
     default int getMinimumFlyHeight(){
