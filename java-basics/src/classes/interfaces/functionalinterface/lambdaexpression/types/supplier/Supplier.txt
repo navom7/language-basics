@@ -1,0 +1,4 @@
+Consumer type lambda function
+-> Represent an operation, that accepts a no input parameter
+    and returns data
+-> Present in package: java.util.function;

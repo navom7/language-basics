@@ -1,0 +1,9 @@
+-> if parent has a abstract method then any function interface
+    extending that interface should not add any new abstract method
+    because functional interface can have only one abstract method
+-> normal interface extending functional interface can have
+    multiple abstract methods
+-> one functional interface extending other functional interface
+    then parent should have only one abstract method
+    and child should have the same method or no abstract
+
