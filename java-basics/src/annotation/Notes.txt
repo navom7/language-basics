@@ -1,0 +1,73 @@
+What is Annotation?
+- It is kind of adding META DATA to the java code.
+- Means, its usage is OPTIONAL.
+- We can use this meta data information at runtime and can add certain logic in our code if wanted.
+- How to Read Meta data information? Using Reflection as discussed in previous video.
+- Annotations can be applied at anywhere like Classes, Methods, Interface, fields, parameters etc.
+
+@Override is an annotation
+
+TYPES OF ANNOTATION
+    1.Pre-defined annotation
+        * Used on Annotations(called meta-annotation)
+            -> @Target
+            -> @Retention
+            -> @Inherited
+            -> @Repeatable(java8 feature)
+
+        * Used on Java code(Like classes, methods, etc.)
+            -> @Deprecated
+            -> @Override
+            -> @SuppressWarnings
+            -> @FunctionalInterface
+            -> @SafeVarargs
+
+
+    2. Custom annotation/User-defined annotation
+
+
+
+
+
+
+Annotations used on Java Code:
+
+    @Deprecated:
+    - Usage of Deprecated Class or Method or fields, shows you compile time WARNING.
+    - Deprecation means, no further improvement is happening on this and use new alternative method or field instead.
+    - Can be used over: Constructor, Field, Local Variable, Method, Package, Parameter, Type(class, interface, enum)
+
+    @Override
+    - checks if correctly overridden or not
+    - used over methods
+
+
+    @SupressWarnings:
+    - It will tell compiler to IGNORE any compile time WARNING.
+    - Use it safely, could led to Run time exception if, any valid warning is IGNORED
+    - Can be used over: Field, Method, Parameter, Constructor, Local Variable, Type (Class or interface or enum)
+    -> this way we can annotate
+        @SupressWarnings("deprecation")
+        @SupressWarnings("unused")
+        @SupressWarnings("all")
+
+
+
+
+    @Functionalinterface:
+    - Restrict Interface to have only 1 abstract method.
+    - Throws Compilation error, if more than 1 abstract method found.
+    - Can be used over: Type (Class or interface or enum)
+
+
+
+
+
+    @SafeVarargs:
+    - Used to suppress "Heap pollution warning"
+    - Used over methods and Constructors which has Variable Arguments as parameter.
+    - Method should be either static or final (i.e. methods which can not be overridden)
+    - In Javag, we can also use it on private methods too.
+
+    What is Heap Pollution?
+    Object of One Type (Example String), storing the reference of another type Object (Example Integer)

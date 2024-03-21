@@ -11,6 +11,7 @@ Functional Interface
  */
 @FunctionalInterface
 public interface Bird {
+//    public Integer key;
     void canFly(String val);
 
     default void canBreath() {

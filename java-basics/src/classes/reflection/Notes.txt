@@ -47,3 +47,10 @@ And these classes are generally returned by listed get Methods of Class only.
 
 
 
+Drawbacks of Reflection
+    ->  this breaks the rule of singleton
+       even if the constructor is private then also we will be able to create the instance of that class
+    -> we can access private fields and methods and also we can call the private methods
+    -> because reflection happens in runtime it is slow and ultimately slows down the code
+
+Hence there is no point of using reflection because it breaks the rule of OOPS principle itself

@@ -1,9 +1,6 @@
 package classes.reflection;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 
 public class Main {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, NoSuchFieldException {
@@ -97,6 +94,53 @@ public class Main {
         Field fieldToSetValue = classInstanceToSetValueOfField.getDeclaredField("breed");
         fieldToSetValue.set(classObject2, "BreedSet");
         System.out.println(classObject2.breed);
+
+
+
+
+
+
+        /*
+            SETTING THE VALUE OF PRIVATE FIELD
+         */
+        Class classToSetPrivateField = ReflectionOfMethods.class;
+        ReflectionOfMethods classObject3 = new ReflectionOfMethods();
+
+        Field fieldToSetPrivateValue = classInstanceToSetValueOfField.getDeclaredField("canSwim");
+        /*
+            I will get this error if i do so
+            read "main" java.lang.IllegalAccessException: class classes.reflection.Main cannot access a member of class classes.reflection.ReflectionOfMethods with modifiers "private"
+	        at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+         */
+//        fieldToSetPrivateValue.set(classObject3, "canSwim");
+//        System.out.println(classObject2.canSwim + "\n\n");
+
+
+
+        //we can access private fields like this
+        fieldToSetPrivateValue.setAccessible(true);
+        fieldToSetPrivateValue.set(classObject3, true);
+        if(fieldToSetPrivateValue.getBoolean(classObject3)) {
+            System.out.println("set true to the private field of the class.......");
+        } //this is the drawback of reflection that we can access and change private fields also
+
+
+
+
+        /*
+            REFLECTION OF CONSTRUCTOR
+
+            this breaks the rule of singleton
+            even if the constructor is private then also we will be able to create the instance of
+            that class
+         */
+        Class singletonClass = SingletonClass.class;
+        Constructor[] constructors = singletonClass.getConstructors();
+        for(Constructor constructor : constructors) {
+            constructor.setAccessible(true);
+            SingletonClass singletonClassObject = (SingletonClass) constructor.newInstance();
+            singletonClassObject.fly();
+        }
 
     }
 }
