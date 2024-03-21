@@ -71,3 +71,52 @@ Annotations used on Java Code:
 
     What is Heap Pollution?
     Object of One Type (Example String), storing the reference of another type Object (Example Integer)
+
+
+
+
+
+
+ANNOTATIONS USED ON OTHER ANNOTATION
+    1. @Target
+        ->It provided the detail of where all that specific annotation can be used
+        i.e. @Target({ElementType.CONSTRUCTOR, ElementType.METHOD}) //This annotation can be used only over constructor and methods
+
+        @Target({ElementType.METHOD}) //This annotation can be used only over method
+        public @interface Override{
+
+        }
+
+        Possible Element Types:
+            TYPE
+            FIELD,
+            METHOD,
+            PARAMETER,
+            CONSTRUCTOR,
+            LOCAL_VARIABLE,
+            ANNOTATION_TYPE,
+            PACKAGE,
+            TYPE PARAMETER ( allow you to apply on generic types <T> )
+            TYPE_USE (Java 8 feature, allow you to use annotation at all places where Type you can declare (like List< @annotation
+
+
+    2. @Retention
+        - This meta-annotation tells, how Annotation will be stored in java.
+            -> RetentionPolicy.SOURCE: Annotations will be discarded by the compiler itself and it will not be recorded in .class file
+            -> RetentionPolicy.CLASS: Annotations will be recorded in class file but will be ignore by JVM at run time.
+            -> RetentionPolicy.RUNTIME: Annotations will be recorded in class file + available during run time.
+            -> Usage of reflection can be done.
+
+    3. @Documented:
+       - By default, Annotations are ignored when Java Documentation is generated.
+       - With this meta-annotation even Annotations will come in Java Docs.
+
+    4. @Inherited:
+       - By default, Annotations applied on parent class are not available to child classes.
+       - But it is after this meta-annotation.
+       - This Meta-annotation has no effect, if annotation is used other than a class.
+
+    5. @Repeatable:
+       - Allow us to use the same annotation more than 1 at same place.
+            We can not do this before JAVA8:
+

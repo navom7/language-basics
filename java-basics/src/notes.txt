@@ -2,3 +2,6 @@ Static methods can access only static variables and methods
 Non-static methods can access both static and non-static methods and variables
 because static methods and variables are associated with class itself, but non-static methods/variables
 can be more than one for same class as we create different instances of the same class
+
+
+Reflection happens at runtime

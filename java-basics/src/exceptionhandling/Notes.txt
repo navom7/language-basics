@@ -1,0 +1,9 @@
+Exception Handling
+
+
+What is Exception?
+    - It's an event, that occurs during the execution of the program.
+    - It will disrupt your program normal flow.
+    - It Creates the Exception Object, which contain information about the Error like o Its Type of Exception and Message
+    • Stack trace etc.
+    - Runtime system use this Exception Object and find the class which can handle it.
