@@ -1,7 +1,6 @@
 package collections.btwo.comparatorvscomparable;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 public class ComparatorVsComparable {
     public static void main(String[] args) {
@@ -36,6 +35,18 @@ public class ComparatorVsComparable {
 
         Arrays.sort(carArr, new CarCustomComparator());
         for(Car c: carArr) {
+            System.out.println(c.name + " " + c.carType);
+        }
+
+
+        System.out.println("\nafter Car class compare: ");
+
+        List<Car> carList = new ArrayList<>();
+        carList.add(new Car("Sedan", "petrol"));
+        carList.add(new Car("Sedan", "diesel"));
+        carList.add(new Car("Hatchback", "cng"));
+        Collections.sort(carList);
+        for(Car c: carList) {
             System.out.println(c.name + " " + c.carType);
         }
     }
