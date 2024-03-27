@@ -1,0 +1,38 @@
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    height: 48px;
+    width: 100%;
+    z-index: 11;
+}
+
+.notebook-icon {
+    display: flex;
+    align-items: center;
+}
+
+.notebook-app-name {
+    font-size: 18px;
+}
+
+#notebook-logo {
+    background-image: url(../public/icon-assets/notebook-icon.png);
+    width: 116px;
+    height: 24px;
+    margin: 12px;
+    display: inline-block;
+    background-size: contain;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+	   only screen and (-o-min-device-pixel-ratio: 2/1),
+	   only screen and (-webkit-min-device-pixel-ratio: 2),
+	   only screen and (min-device-pixel-ratio: 2)  {
+
+	#notebook-logo {
+	 	background-image: url(../public/icon-assets/notebook-icon@2x.png);	
+	}
+
+}
