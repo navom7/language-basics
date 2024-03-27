@@ -10,6 +10,8 @@ public class ArrDequeue {
         arrDq.addLast(5);
         arrDq.addLast(10);
 
-        
+        System.out.println(arrDq.size());
+
+
     }
 }
