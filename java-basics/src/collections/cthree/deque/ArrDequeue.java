@@ -12,6 +12,7 @@ public class ArrDequeue {
 
         System.out.println(arrDq.size());
 
+        System.out.println(arrDq.poll());
 
     }
 }
