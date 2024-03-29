@@ -1,4 +1,4 @@
-package collections.btwo.priorityqueue;
+package collections.btwoPQ.priorityqueue;
 
 import java.util.PriorityQueue;
 

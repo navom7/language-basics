@@ -1,7 +1,8 @@
-package collections.btwo.priorityqueue;
+package collections.btwoPQ.priorityqueue;
 
 import java.util.PriorityQueue;
 
+//PriorityQueue is Not ThreadSafe
 public class MaxPriorityQueue {
     public static void main(String[] args) {
         PriorityQueue<Integer> maxPQ = new PriorityQueue<>((Integer a, Integer b) -> b-a);

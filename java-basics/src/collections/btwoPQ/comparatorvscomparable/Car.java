@@ -1,6 +1,4 @@
-package collections.btwo.comparatorvscomparable;
-
-import java.util.Comparator;
+package collections.btwoPQ.comparatorvscomparable;
 
 public class Car implements Comparable<Car> {
     String name;

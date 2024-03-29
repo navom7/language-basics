@@ -1,4 +1,4 @@
-package collections.btwo.comparatorvscomparable;
+package collections.btwoPQ.comparatorvscomparable;
 
 import java.util.Comparator;
 
