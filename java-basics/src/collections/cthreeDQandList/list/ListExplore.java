@@ -2,6 +2,8 @@ package collections.cthreeDQandList.list;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ListExplore {
     public static void main(String[] args) {
@@ -21,7 +23,8 @@ public class ListExplore {
         list2.add(3, 90);
 
         list1.addAll(2, list2);
-
+        list1.add(20);
+        list1.add(34);
 
         System.out.println("\nafter add all: ");
         list1.forEach((Integer a) -> System.out.print(a + " "));
@@ -51,5 +54,51 @@ public class ListExplore {
 
         System.out.println("\n");
         System.out.println("index of -20: " + list1.indexOf(-20));
+        System.out.println("last index of -20: " + list1.lastIndexOf(-20));
+
+
+
+        //Iterator forward
+        ListIterator<Integer> listItr = list1.listIterator();
+        while(listItr.hasNext()) {
+            int val = listItr.next();
+            System.out.println("val: " + val + " nextIndex: " + listItr.nextIndex() + " prev index: " + listItr.previousIndex());
+            if(val == -20) {
+                listItr.add(-10000);
+            }
+        }
+
+
+        System.out.println("\n\nafter itr add: ");
+        list1.forEach((Integer a) -> System.out.print(a + " "));
+
+
+        //Iterator backward
+        ListIterator<Integer> listItrBackwrd = list1.listIterator(list1.size());
+        while(listItrBackwrd.hasPrevious()) {
+            int val = listItrBackwrd.previous();
+            System.out.println("val: " + val + " nextIndex: " + listItrBackwrd.previousIndex() + " prev index: " + listItrBackwrd.nextIndex());
+            if(val == -20) {
+                listItrBackwrd.add(20);
+//                listItrBackwrd.add(-10000);
+            }
+        }
+
+
+        System.out.println("\n\nafter itr add: ");
+        list1.forEach((Integer a) -> System.out.print(a + " "));
+
+
+
+        //Threadsafe version of Arraylist
+        List<Integer> list = new CopyOnWriteArrayList<>();
+        list.add(4);
+        list.add(1, 5);
+
+
+        System.out.println("\n\nafter itr add: ");
+        list.forEach((Integer a) -> System.out.print(a + " "));
+
+
     }
 }
