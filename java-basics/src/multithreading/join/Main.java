@@ -1,4 +1,4 @@
-package multithreading.monitorlock.thread.join;
+package multithreading.join;
 
 public class Main {
     public static void main(String[] args) {

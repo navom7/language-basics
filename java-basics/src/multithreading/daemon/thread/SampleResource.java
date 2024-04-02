@@ -1,4 +1,4 @@
-package multithreading.monitorlock.thread.join;
+package multithreading.daemon.thread;
 
 public class SampleResource {
     synchronized void produce() {
