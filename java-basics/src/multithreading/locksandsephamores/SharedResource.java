@@ -10,6 +10,7 @@ public class SharedResource {
         } catch (Exception ex) {
 
         }
+//Logging when releasing the thread
         System.out.println("Lock release by thread: " + Thread.currentThread().getName());
     }
 }
