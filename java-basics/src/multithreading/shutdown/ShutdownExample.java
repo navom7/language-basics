@@ -1,4 +1,4 @@
-package multithreading.shutdownAndScheduledThreadPoolExecutor;
+package multithreading.shutdown;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
