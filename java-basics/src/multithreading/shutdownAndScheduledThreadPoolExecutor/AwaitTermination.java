@@ -2,8 +2,9 @@ package multithreading.shutdownAndScheduledThreadPoolExecutor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
-public class ShutdownExample {
+public class AwaitTermination {
     public static void main(String[] vargs) {
         ExecutorService poolExecutor = Executors.newFixedThreadPool(5);
 
@@ -20,10 +21,18 @@ public class ShutdownExample {
         poolExecutor.shutdown();
 
         System.out.println("already submitted task Thread will execute event after shutdown");
-        poolExecutor.submit(() -> {
-            System.out.println("executor caled after shutdown");
-        });
 
+        try {
+
+            boolean isTerminated = poolExecutor.awaitTermination(2, TimeUnit.SECONDS);
+            System.out.println("terminated after 2 second: " + isTerminated);
+
+            isTerminated = poolExecutor.awaitTermination(5, TimeUnit.SECONDS);
+            System.out.println("Terminated after 5 seconds: " + isTerminated);
+
+        } catch (Exception e) {
+
+        }
 
     }
 }
