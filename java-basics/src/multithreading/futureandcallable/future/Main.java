@@ -1,4 +1,4 @@
-package multithreading.futureandcallable;
+package multithreading.futureandcallable.future;
 
 import java.util.concurrent.*;
 
